@@ -15,10 +15,11 @@ import java.util.Scanner;
 public class OrderItemMenu {
 
     private final OrderItemService orderItemService;
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
 
-    public OrderItemMenu (OrderItemService orderItemService) {
+    public OrderItemMenu (OrderItemService orderItemService, Scanner scanner) {
         this.orderItemService = orderItemService;
+        this.scanner = scanner;
     }
 
     public void start () {

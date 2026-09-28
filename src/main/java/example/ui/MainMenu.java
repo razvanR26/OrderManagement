@@ -21,10 +21,10 @@ public class MainMenu {
     private final Scanner scanner = new Scanner(System.in);
 
     public MainMenu (CustomerDao customerDao, ProductDao productDao, OrderDao orderDao, OrderItemDao orderItemDao) {
-        customerMenu = new CustomerMenu(new CustomerService(customerDao));
-        productMenu = new ProductMenu(new ProductService(productDao));
-        orderMenu = new OrderMenu(new OrderService(orderDao, customerDao, orderItemDao, productDao));
-        orderItemMenu = new OrderItemMenu(new OrderItemService(orderItemDao, orderDao, productDao));
+        customerMenu = new CustomerMenu(new CustomerService(customerDao), scanner);
+        productMenu = new ProductMenu(new ProductService(productDao), scanner);
+        orderMenu = new OrderMenu(new OrderService(orderDao, customerDao, orderItemDao, productDao), scanner);
+        orderItemMenu = new OrderItemMenu(new OrderItemService(orderItemDao, orderDao, productDao), scanner);
     }
 
     public void start () {

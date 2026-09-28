@@ -16,10 +16,11 @@ import java.util.*;
 public class ProductMenu {
 
     private final ProductService productService;
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
 
-    public ProductMenu (ProductService productService) {
+    public ProductMenu (ProductService productService, Scanner scanner) {
         this.productService = productService;
+        this.scanner = scanner;
     }
 
     public void start () {

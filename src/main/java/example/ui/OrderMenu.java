@@ -17,10 +17,11 @@ import java.util.*;
 public class OrderMenu {
 
     private final OrderService orderService;
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
 
-    public OrderMenu (OrderService orderService) {
+    public OrderMenu (OrderService orderService, Scanner scanner) {
         this.orderService = orderService;
+        this.scanner = scanner;
     }
 
     public void start () {

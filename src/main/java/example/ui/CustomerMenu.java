@@ -16,10 +16,11 @@ import static example.ui.common.Helper.read;
 public class CustomerMenu {
 
     private final CustomerService customerService;
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
 
-    public CustomerMenu (CustomerService customerService) {
+    public CustomerMenu (CustomerService customerService, Scanner scanner) {
         this.customerService = customerService;
+        this.scanner = scanner;
     }
 
     public void start () {
